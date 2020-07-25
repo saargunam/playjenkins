@@ -2,6 +2,7 @@ pipeline {
 
   environment {
     registry = "http://harbor.workshop.tw:30002/endgame"
+    buildname = "harbor.workshop.tw:30002/endgame"
     registryCredential = 'harbor'
     dockerImage = ""
   }
@@ -18,7 +19,7 @@ pipeline {
     stage('Build image') {
       steps{
         script {
-          dockerImage = docker.build registry + ":latest"
+          dockerImage = docker.build buildname + ":latest"
         }
       }
     }
