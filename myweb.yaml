@@ -16,7 +16,7 @@ spec:
         app: myweb
     spec:
       containers:
-      - image: saargunamrv/endgame:latest
+      - image: endgame/endgame:latest
         imagePullPolicy: Always
         name: myweb
 ---
