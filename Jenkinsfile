@@ -1,7 +1,7 @@
 pipeline {
 
   environment {
-    registry = "harbor.workshop.tw:30002/endgame"
+    registry = "http://harbor.workshop.tw:30002/endgame"
     registryCredential = 'harbor'
     dockerImage = ""
   }
